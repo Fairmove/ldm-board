@@ -237,7 +237,7 @@ footer{text-align:center;font-size:11.5px;color:var(--g4);padding:10px 0 16px;}
   renderKopf();
   (async function(){
     try{
-      var base=IS_SP?SITE_URL+'/Freigegebene%20Dokumente/':'https://raw.githubusercontent.com/Fairmove/ldm-board/main/';
+      var base=IS_SP?SITE_URL+'/Freigegebene%20Dokumente/':location.href.replace(/[^/]*$/,'');
       var opts=IS_SP?{credentials:'same-origin'}:{cache:'no-store'};
       var r=await Promise.all([
         fetch(base+'ldm_pbi_ep.html',opts),
