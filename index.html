@@ -253,13 +253,4 @@ footer{text-align:center;font-size:11.5px;color:var(--g4);padding:10px 0 16px;}
     mountNative();ladeDaten();
   })();
   setInterval(function(){if(!modalKontext)ladeDaten();},POLL_MS);
-})(document);</script><script>(function(){var LS="ldm_infos_team";var FLOW="https://default20f84c16ba80467db4d63ea7a5ec02.fc.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8aae3aee750944499f42a3f335ba91c5/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yPXDsc1WtVB3J9Y0HCayZNboNen1QMT_8suVngtJzBc";function load(){try{return JSON.parse(localStorage.getItem(LS)||"[]")}catch(e){return[]}}function save(a){localStorage.setItem(LS,JSON.stringify(a))}function fmt(ts){var d=new Date(ts);return d.toLocaleString('de-CH',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}function render(){var el=document.getElementById('infoList');if(!el)return;var a=load();el.innerHTML=a.length?a.map(function(i){return "<div class='info-item'><div class='meta'>"+fmt(i.ts)+"</div><div class='txt'>"+esc(i.text)+"</div></div>"}).join(''):"<div class='info-leer'>Noch keine Infos.</div>"}function post(){var t=(document.getElementById('infoText').value||'').trim();if(!t)return;if(FLOW){try{fetch(FLOW,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:t})}catch(e){}}var a=load();a.unshift({ts:Date.now(),text:t});save(a);document.getElementById('infoText').value='';render()}function init(){var b=document.getElementById('infoSend');if(b&&!b.__w){b.__w=1;b.addEventListener('click',post)}render()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script><script>
-(function(){
- function qsa(s){return Array.prototype.slice.call(document.querySelectorAll(s));}
- function refit(){try{window.dispatchEvent(new Event("resize"));}catch(e){}}
- function showTab(n){qsa(".maintab").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-tab")===n);});qsa("#panel-shopfloor,#panel-team").forEach(function(p){p.classList.toggle("active",p.id==="panel-"+n);});refit();setTimeout(refit,60);setTimeout(refit,320);}
- function showSub(n){qsa(".subtab").forEach(function(b){b.classList.toggle("active",b.getAttribute("data-sub")===n);});qsa("#sub-team1,#sub-team2").forEach(function(p){p.classList.toggle("active",p.id==="sub-"+n);});refit();setTimeout(refit,60);setTimeout(refit,320);}
- qsa(".maintab").forEach(function(b){b.addEventListener("click",function(){showTab(b.getAttribute("data-tab"));});});
- qsa(".subtab").forEach(function(b){b.addEventListener("click",function(){showSub(b.getAttribute("data-sub"));});});
-})();
-</script></body></html>
+})(docume
